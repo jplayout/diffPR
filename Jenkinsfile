@@ -1,4 +1,4 @@
-public bool IsMsiGenRelated() {
+def IsMsiGenRelated() {
     try {
         sh 'git diff '
         return true
