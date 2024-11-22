@@ -1,7 +1,7 @@
 def IsMsiGenRelated() {
     checkout scm
     try {
-        sh 'git diff --name-only "${CHANGE_TARGET}".."${CHANGE_BRANCH:-HEAD}"'
+        sh 'git diff --name-only "${CHANGE_TARGET}"..HEAD'
         return true
     }
     catch(Exception e) {
