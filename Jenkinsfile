@@ -1,6 +1,7 @@
 def IsMsiGenRelated() {
+    checkout scm
     try {
-        sh 'git diff '
+        sh 'git diff --name-only "${CHANGE_TARGET}"..HEAD'
         return true
     }
     catch(Exception e) {
