@@ -1,7 +1,7 @@
 def IsMsiGenRelated() {
     checkout scm
     try {
-        sh 'git diff --name-only "origin/$CHANGE_TARGET"..HEAD'
+        sh 'git diff --name-only "origin/$CHANGE_TARGET"..HEAD | grep -e "msi.py" -e "unified-release/dist/unified-distribution/scons/resources/msi/*"'
         return true
     }
     catch(Exception e) {
