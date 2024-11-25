@@ -1,4 +1,5 @@
 def IsMsiGenRelated() {
+    sh 'rm -rf .git ./*'
     checkout scm
     sh 'git branch -a'
     sh 'git fetch --all --prune'
