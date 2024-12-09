@@ -4,7 +4,7 @@
 JENKINS_URL="http://localhost:8080"
 USER="admin"
 JOB_NAME="test"
-API_TOKEN="11299e1f448e3410252c8788ec04104934"
+API_TOKEN=""
 AUTH="${USER}:${API_TOKEN}"
 ALL_PR="${JENKINS_URL}/job/${JOB_NAME}/view/change-requests/api/json?tree=jobs[name]"
 
