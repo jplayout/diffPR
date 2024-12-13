@@ -8,7 +8,7 @@ stage("Get RFC stages stats") {
             node(POD_LABEL) {
                 withCredentials([usernamePassword(credentialsId: '7-League-API-Query', usernameVariable: 'USER_NAME', passwordVariable: 'API_TOKEN')]) {
                     checkout scm
-                    sh 'DAYS_OLD=${days} scripts/build_time_metrics.sh'
+                    sh 'DAYS_OLD=${days} BEE-42296/build_time_metrics.sh'
                     archiveArtifacts artifacts: 'stages.csv'
                  }
             }
